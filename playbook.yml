@@ -1,0 +1,12 @@
+- hosts: all
+  tasks:
+    - name:  nginx install or check
+      apt: name=nginx state=latest
+    - name: start nginx
+      service:
+          name: nginx
+          state: started
+
+    - name: curl install
+      apt: name=curl state=latest
+
